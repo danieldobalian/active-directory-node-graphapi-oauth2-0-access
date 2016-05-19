@@ -19,15 +19,15 @@ The **auth.js**  file contains the code for authentication from Microsoft Graph 
 
 The **api.js** file contains the code which builds the request for involving the Graph REST APIs..
 
-- `connect` function demonstrates how to apply for an access token from Microsoft Graph and save it in cookies.
+- `connect` function demonstrates how to apply for an access token from Microsoft Graph and save it in session.
 - `getUser` function demonstrates how to query all users' (or specific user with user's id) info in tenant and list them on the page.
 - `addUser` function demonstrates how to create a new user in tenant.
 - `editUser` function demonstrates how to update a user's info in tenant.
-- `delUser` function demonstrates how to delelt a user in tenant.
+- `delUser` function demonstrates how to delete a user in tenant.
 
 You can refer to [Graph REST API reference](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/user) to understand more details.
 
-The Graph API is compatible with OData V3 and enables applications to construct more complex queries. The sample application is authenticated with Graph API by presenting a token that is issued by Microsoft Azure Access Control Service using OAuth 2.0. The sample application is authorized in [Service to Service Calls Using Client Credentials](https://msdn.microsoft.com/en-us/library/azure/dn645543.aspx?f=255&MSPPError=-2147217396) flow to read user information from a demonstration Azure AD company. To execute Write Operations for your company's data (Create, Delete, Update), it's needed to use your own Azure AD company and upgrate role of the AD application you use with a administrator permission (the PowerShell script shown as below is guiding us to konw how to do it).
+The Graph API is compatible with OData V3 and enables applications to construct more complex queries. The sample application is authenticated with Graph API by presenting a token that is issued by Microsoft Azure Access Control Service using OAuth 2.0. The sample application is authorized in [Service to Service Calls Using Client Credentials](https://msdn.microsoft.com/en-us/library/azure/dn645543.aspx?f=255&MSPPError=-2147217396) flow to read user information from a demonstration Azure AD company. To execute Write Operations for your company's data (Create, Delete, Update), it's required to use your own Azure AD company and upgrade the role of the AD application that you are using with an administrator permission (the PowerShell script shown as below is guiding us to know how to do it).
 
 ```
 #use the administrator account to sign in
