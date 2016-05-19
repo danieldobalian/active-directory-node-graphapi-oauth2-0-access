@@ -1,0 +1,14 @@
+﻿extends layout
+
+block content
+    div.container.body-content(ng-app='app')
+        div(ng-controller='IndexController')
+            h1
+                button.btn.btn-success(ng-click="connect()",ng-show="isConnect==false") connect to Microsoft Graph
+                button.btn.btn-danger(ng-click="disconnect()",ng-show="isConnect==true") disconnect to Microsoft Graph
+        div.alert(class="alert-{{msgalert}}") {{msg}}
+        hr
+        div(ng-view)
+    script(src='js/angular.min.js')
+    script(src='js/angular-route.min.js')
+    script(src='js/app.js')

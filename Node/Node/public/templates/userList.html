@@ -1,0 +1,41 @@
+﻿<div ng-show="!isEdit">
+    <a class="btn btn-default" href="/addUser">create a new user</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Display Name</th>
+                <th>User Principal Name</th>
+                <th>Object ID</th>
+                <th>Account Enabled</th>
+                <th>Edit Link</th>
+                <th>Delete Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="u in users track by $index">
+                <td>{{u.displayName}}</td>
+                <td>{{u.userPrincipalName}}</td>
+                <td>{{u.id}}</td>
+                <td>{{u.accountEnabled?'True' : 'False'}}</td>
+                <td><a ng-click="edit($index)">Edit</a></td>
+                <td><a ng-click="del(u.id)">Del</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<form ng-submit="submit()" ng-show="isEdit">
+    <div class="form-group">
+        <label for="displayName" class="control-label">display name</label>
+        <div>
+            <input type="text" name="displayName" ng-model="form.displayName">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="userPrincipalName" class="control-label">principal name</label>
+        <div>
+            <input type="text" name="userPrincipalName" ng-model="form.userPrincipalName">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success">submit</button>
+    <button type="button" class="btn btn-default" ng-click="cancel()">cancel</button>
+</form>

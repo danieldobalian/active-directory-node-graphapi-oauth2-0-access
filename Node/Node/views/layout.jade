@@ -1,0 +1,19 @@
+﻿doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    base(href='/')
+  body
+    div.navbar.navbar-inverse.navbar-fixed-top
+        div.container
+            div.navbar-header
+                a.navbar-brand(href="/") #{title}
+            div.navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home 
+                    li
+                        a(href="/userList") User Manager
+    block content
