@@ -20,10 +20,10 @@ The **auth.js**  file contains the code for authentication from Microsoft Graph 
 The **api.js** file contains the code which builds the request for involving the Graph REST APIs..
 
 - `connect` function demonstrates how to apply for an access token from Microsoft Graph and save it in session.
-- `getUser` function demonstrates how to query all users' (or specific user with user's id) info in tenant and list them on the page.
-- `addUser` function demonstrates how to create a new user in tenant.
-- `editUser` function demonstrates how to update a user's info in tenant.
-- `delUser` function demonstrates how to delete a user in tenant.
+- `get user` function demonstrates how to query all users' (or specific user with user's id) info in tenant and list them on the page.
+- `post user` function demonstrates how to create a new user in tenant.
+- `patch user` function demonstrates how to update a user's info in tenant.
+- `delete user` function demonstrates how to delete a user in tenant.
 
 You can refer to [Graph REST API reference](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/user) to understand more details.
 
