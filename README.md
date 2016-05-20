@@ -88,10 +88,12 @@ The Graph API is compatible with OData V3 and enables applications to construct 
 
 - Perform CURD operations for these users' info.
     - Add user
-        ![Add user](./Images/7.png)
+
+    ![Add user](./Images/7.png)
 
     - Edit user
-        ![Edit user](./Images/8.png)
+
+    ![Edit user](./Images/8.png)
 
 - Click the **disconnect** button in the home page to remove the access token cookies.
 
